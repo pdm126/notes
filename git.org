@@ -1,0 +1,7 @@
+git config --global user.name "username"
+git config --global user.email "thing@thing.co.uk"
+git add	. < adds changes to staging index file
+git commit < commits changes (locally)
+git push origin	master < pushes	back to	site
+git fetch < retrieve all changes
+git pull < does	fetch and merge
