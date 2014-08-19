@@ -1,0 +1,152 @@
+Emac Commands
+
+* Start Org Mode
+Alt -x org-mode
+** Note
+puts current buffer into org-mode, be careful, M -x python-mode for ex to change back
+
+* Start winner-mode
+M -x winner-mode
+Winner Mode is a global minor mode. 
+When activated, it allows to “undo” (and “redo”) changes in the window config
+key commands ‘C-c left’ and ‘C-c right’. 
+* Go to Start of or end of Buffer
+Alt (shift) < or > 
+** needs C + Alt if alt is opening the unity dash 
+
+* Up or down a line
+C -n c -p
+
+* End of line
+C -e 
+
+* Start of line
+C -a
+
+* Yank (paste from kill ring)
+C -y
+
+* Kill/Yank Copy/Paste
+C -w   Kill selected
+Alt -w Save selected into kill ring, leave original
+
+C -y   Paste top of kill ring
+Alt -y Once one C -y Cycle through kill ring to paste
+Alt (shift) -Y Cycke through kill ring backwards
+** Notes
+C- w does not kill from where the cursor is but from one back
+
+* Start select (set mark)
+C -SPACE
+* Toggle cursor to start/end of secletion
+C -x C -x
+* Writeout/save current buffer only/ file save as
+C -x C -w
+
+* Search Current buffer for word
+C -s
+
+* Save all open buffer
+C -x C -s (all open buffers,if modified, prompted for y/n for each)
+
+* Exit Emacs :-(
+C -x C -c
+
+* Find File (opens in new buffer, tabbing completion works)
+C -x C -f
+
+* Find/open file (repaces what's in current buffer CHK)
+C -x C -v
+* Cycle through buffers
+C -x left or right cycles current window through buffers
+* winner-mode/ buffer undo
+M -x winner-mode
+setup windows
+undo windows with C- c left or right in winner mode
+** links
+http://ergoemacs.org/emacs/emacs_winner_mode.html
+* Copy buffer open second frame vertical
+C -x 3
+
+* Copy buffer open second frame horizontal
+C -x 
+* Make windows bigger/smaller
+C -x ^ (shift + 6) one more line vertical
+C -x + make windows equally
+C -x { or } move window horizontal
+can be conbined with C -u +/- num command e.g
+C -u -4 C -x ^ shrink vertical by four, note the minus
+** links
+http://stackoverflow.com/questions/4987760/how-to-change-size-of-split-screen-emacs-windows
+* Dismiss current buffer window
+C -x 0
+* Bring current buffer to one page, put all other in background
+C -X 1
+* Cycle cursor through visible buffers 
+C -x o
+
+* Select buffer to open (text, tabbing works)
+C -x b
+
+* List buffers available (in current window)
+C -x C -b
+* kill current buffer
+C -x k
+* Kill buffer and window
+C -x 40
+
+* Back one word
+C + Alt -b
+
+* Forward one word
+C + Alt -f
+
+* Undo
+C -x u undo last action in budder (i.e. undelete)
+C -x _ undo (chk still a mystery)
+
+* Get shell (basic)
+Alt -x shell
+** Shell, term
+Alt -x term 
+Should be better (CHK) cause C -x o doesn't switch buffers anymore
+* Display info about point cursor is
+C -x =
+
+* Start Org Mode
+Alt -x org-mode
+** Note
+puts current buffer into org-mode, be careful, M -x python-mode for ex to change back
+
+* Help Commands
+** Show all key binding available inc those from current mode
+C -h b
+** Show all key binding for current main mode
+C -h m
+
+* Org-mode commands
+Cycle through * and ** with TAB
+
+* bash stuff working in emacs
+What seems to be one C -c in bash requires double entry in emacs
+* Notes
+** Disabled the Alt in the unity dash to better get to the meta key as alt
+** *Messages* is a history of what emacs has done, (C -x b) *M TAB to bring up
+** What the buffer avail columns mean
+   M - An asterisk (*) is displayed in this column if the buffer has been modified since it was last saved
+   R - A percent sign (%) is displayed in this column if the buffer is read-only
+   Buffer  The name of the buffer
+   Size Size of the buffer in Bytes
+   Mode The Major mode active in the buffer. We haven’t discussed modes yet, so don’t worry if this column doesn’t make any sense just yet. It will soon. 
+   File The name of the file, if any, load into the buffer
+
+* Python
+M -x python-mode toggles mode/ highiliging
+M - py-shell opens 2.7 shell better to run python3 in terminal
+
+adding pythin to emacs
+
+
+http://stackoverflow.com/questions/8865867/python-shell-in-emacs-24
+* scripting commands
+C u (+/- number of times) (command/s)
