@@ -3,7 +3,7 @@ Emac Commands
 * Start Org Mode
 Alt -x org-mode
 ** Note
-puts current buffer into org-mode, be careful, M -x python-mode for ex to change back
+puts current buffer into org-mode
 
 * Start winner-mode
 M -x winner-mode
@@ -23,16 +23,13 @@ C -e
 * Start of line
 C -a
 
-* Yank (paste from kill ring)
-C -y
-
 * Kill/Yank Copy/Paste
 C -w   Kill selected
 Alt -w Save selected into kill ring, leave original
 
 C -y   Paste top of kill ring
 Alt -y Once one C -y Cycle through kill ring to paste
-Alt (shift) -Y Cycke through kill ring backwards
+Alt (shift) -Y Cycle through kill ring backwards
 ** Notes
 C- w does not kill from where the cursor is but from one back
 
@@ -144,7 +141,7 @@ What seems to be one C -c in bash requires double entry in emacs
 M -x python-mode toggles mode/ highiliging
 M - py-shell opens 2.7 shell better to run python3 in terminal
 
-adding pythin to emacs
+adding python to emacs
 
 
 http://stackoverflow.com/questions/8865867/python-shell-in-emacs-24
